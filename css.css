@@ -6,32 +6,34 @@ body, html{
 header{
     background-color: plum;
     height: 60px;
-}
-
-section{
-    background-color: green;
-    display: flex;
-    /*flex-direction: column;*/
+    grid-area: header;
 }
 
 nav{
-    width: 25%;
     background-color: coral;
+    grid-area: menu;
 }
 
 footer{
     background-color: aquamarine;
     height: 80px;
+    grid-area: footer;
 }
 
 article{
-    width: 75%;
     height: 250px;
     background-color: beige;
+    grid-area: content;
 }
 
 #container{
     margin: 0 auto;
     width: 1200px;
     background-color: orange;
+    display: grid;
+    grid-template-areas: 
+        "header header header header"
+        "content content content menu"
+        "footer footer footer footer"
+    ;
 }
